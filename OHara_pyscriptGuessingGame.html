@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="stylesheet" href="https://pyscript.net/lastest/pyscript.css" />
+        <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
         <script defer src="https://pyscript.net/latest/pyscript.js"></script>
         <style>
             label{
-                display:block;
+                display: block;
             }
         </style>
     </head>
@@ -26,7 +26,7 @@
     <py-script>
         from pyscript import when
         @when("click", selector="#submit")
-        def Check_guess():
+        def check_guess():
             user_guess = int(Element("guess").value)
             result = Element("result")
             if user_guess == selection:
@@ -36,6 +36,6 @@
             else:
                 result.write("Try again! Your guess was too low.")
 
-    </py-script>
+        </py-script>
     </body>
 </html>
