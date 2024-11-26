@@ -31,11 +31,11 @@
                 user_guess = int(Element("guess")).value
                 result = Element("result")
                 if user_guess == selection:
-                    print("Congratulations! You guessed correctly")
+                    display("Congratulations! You guessed correctly", "result")
                 elif user_guess > selection:
-                    print("Try again! Your guess was too high")
+                    display("Try again! Your guess was too high", "result")
                 else:
-                    print("Try again! Your guess was too low")
+                    display("Try again! Your guess was too low", "result")
 
             @when("click", selector = "#submit")
         </py-script>
