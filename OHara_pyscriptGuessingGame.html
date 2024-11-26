@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel = "stylesheet" href = "https://pyscript.net/latest/pyscript.com"/>
+        <link rel = "stylesheet" href = "https://pyscript.net/latest/pyscript.css"/>
         <script defer src = "https://pyscript.net/latest/pyscript.js"></script>
         <style>
             label{
@@ -31,11 +31,11 @@
                 user_guess = int(Element("guess")).element.value
                 result = Element("result")
                 if user_guess == selection:
-                    display("Congratulations! You guessed correctly", "result")
+                    result.write("Congratulations! You guessed correctly")
                 elif user_guess > selection:
-                    display("Try again! Your guess was too high", "result")
+                    result.write("Try again! Your guess was too high")
                 else:
-                    display("Try again! Your guess was too low", "result")
+                    result.write("Try again! Your guess was too low")
 
             Element("submit").element.addEventListener("click", check_guess)
         </py-script>
