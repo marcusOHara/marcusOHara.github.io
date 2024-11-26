@@ -18,7 +18,7 @@
             selection = np.random.randint(0,100,1)[0]
         </py-script>
         <form>
-            <label for = "guess">Guess:</label><input name = "guess" id = "guess">
+            <label for = "guess">Guess:</label><input name = "guess" id = "guess" type = "number">
 
             <button type = "button" id = "submit">Check Guess</button>
             <div id = "result"></div>
@@ -26,7 +26,7 @@
 
         <py-script>
             from pyscript import when
-            @when("click", selector = "#submit")
+            
             def check_guess():
                 user_guess = int(Element("guess")).value
                 result = Element("result")
@@ -36,6 +36,8 @@
                     result.write("Try again! Your guess was too high")
                 else:
                     result.write("Try again! Your guess was too low")
+
+            @when("click", selector = "#submit")
         </py-script>
     </body>
 </html>
